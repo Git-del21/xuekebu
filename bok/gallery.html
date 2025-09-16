@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学术科技部</title>
+    <link rel="stylesheet" href="css/linear-style.css">
+    <style>
+        body, html {
+            font-family: '楷体', '楷体_GB2312', 'KaiTi', 'STKaiti', 'Noto Serif SC', serif !important;
+        }
+        button, .cta-button, a.button {
+            font-family: inherit;
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 20px;
+            margin: 4px 0;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover, .cta-button:hover, a.button:hover {
+            background: #1565c0;
+        }
+    </style>
+    <!-- Consider adding a lightbox CSS if you implement a lightbox -->
+    <!-- <link rel="stylesheet" href="path/to/lightbox.css"> -->
+</head>
+<body>
+    <canvas id="snake-bg-canvas"></canvas>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1><a href="index.html">学术科技部</a></h1>
+                <p>记录我们的欢笑与成长</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首阙</a></li>
+                    <li><a href="timeline.html">岁笺</a></li>
+                    <li><a href="gallery.html">画棠集</a></li>
+                    <li><a href="our-people.html">同袍录</a></li>
+                    <li><a href="resources.html">藏珠阁</a></li>
+                    <li><a href="about.html">素履志</a></li>
+                    <li><a href="message-board.html">鸿笺驿</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" aria-label="切换主题">浅色模式</button>
+        </header>
+
+        <main>
+            <section class="content-area">
+                <div class="page-header">
+                    <h1 class="page-title"></h1>
+                    <p class="page-subtitle">每一张照片都承载着我们并肩同行的故事与欢笑。（期待看到学弟学妹们认真工作时的靓照+表情包❥(^_-)）</p>
+                </div>
+
+                <div class="page-header">
+                    <h2 class="page-title">记录瞬间</h2>
+                </div>
+                <div class="gallery-filters">
+                    <button class="active" data-filter="all">全部</button>
+                    <button data-filter="events">整点抽象的</button>
+                    <button data-filter="projects">项目纪实</button>
+                    <button data-filter="historical">回忆</button>
+                    <button data-filter="video">视频</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="video" id="video-container-2024">
+                        <video preload="metadata" style="width:100%; cursor:pointer;">
+                            <source src="images/video/2024.mp4#t=0.1" type="video/mp4">
+                            您的浏览器不支持视频标签。
+                        </video>
+                        <div class="gallery-item-caption">2024级纳新视频</div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="events">
+                        <a href="images/chouxiang/chou (1).jpg" data-lightbox="gallery" data-title="表情包 1">
+                            <img src="images/chouxiang/chou (1).jpg" alt="表情包 1">
+                        </a>
+                        <div class="gallery-item-caption">化院的汉子绝不认输</div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <a href="images/chouxiang/chou (1).png" data-lightbox="gallery" data-title="表情包 2">
+                            <img src="images/chouxiang/chou (1).png" alt="表情包 2">
+                        </a>
+                        <div class="gallery-item-caption">做大做强,再创辉煌</div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <a href="images/chouxiang/chou (2).jpg" data-lightbox="gallery" data-title="表情包 3">
+                            <img src="images/chouxiang/chou (2).jpg" alt="表情包 3">
+                        </a>
+                        <div class="gallery-item-caption">学习哪有不疯的</div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <a href="images/chouxiang/chou (3).jpg" data-lightbox="gallery" data-title="表情包 4">
+                            <img src="images/chouxiang/chou (3).jpg" alt="表情包 4">
+                        </a>
+                        <div class="gallery-item-caption">嗯……对</div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <a href="images/chouxiang/chou (4).jpg" data-lightbox="gallery" data-title="表情包 5">
+                            <img src="images/chouxiang/chou (4).jpg" alt="表情包 5">
+                        </a>
+                        <div class="gallery-item-caption">不是哥们</div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <a href="images/chouxiang/chou (5).jpg" data-lightbox="gallery" data-title="表情包 6">
+                            <img src="images/chouxiang/chou (5).jpg" alt="表情包 6">
+                        </a>
+                        <div class="gallery-item-caption">读泥嵙读的</div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <a href="images/chouxiang/2 (1).jpg" data-lightbox="gallery" data-title="表情包 7">
+                            <img src="images/chouxiang/2 (1).jpg" alt="表情包 7">
+                        </a>
+                        <div class="gallery-item-caption">身残志坚</div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <a href="images/chouxiang/2 (2).jpg" data-lightbox="gallery" data-title="表情包 8">
+                            <img src="images/chouxiang/2 (2).jpg" alt="表情包 8">
+                        </a>
+                        <div class="gallery-item-caption">黄花大闺女</div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <a href="images/chouxiang/2 (3).jpg" data-lightbox="gallery" data-title="表情包 9">
+                            <img src="images/chouxiang/2 (3).jpg" alt="表情包 9">
+                        </a>
+                        <div class="gallery-item-caption">冷酷</div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <a href="images/chouxiang/2 (4).jpg" data-lightbox="gallery" data-title="表情包 10">
+                            <img src="images/chouxiang/2 (4).jpg" alt="表情包 10">
+                        </a>
+                        <div class="gallery-item-caption">那咋啦</div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <a href="images/chouxiang/2 (5).jpg" data-lightbox="gallery" data-title="表情包 11">
+                            <img src="images/chouxiang/2 (5).jpg" alt="表情包 11">
+                        </a>
+                        <div class="gallery-item-caption">两小儿辩joker</div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <a href="images/chouxiang/3 (1).jpg" data-lightbox="gallery" data-title="表情包 12">
+                            <img src="images/chouxiang/3 (1).jpg" alt="表情包 12">
+                        </a>
+                        <div class="gallery-item-caption">耳朵没看见</div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <a href="images/chouxiang/3 (2).jpg" data-lightbox="gallery" data-title="表情包 13">
+                            <img src="images/chouxiang/3 (2).jpg" alt="表情包 13">
+                        </a>
+                        <div class="gallery-item-caption">讨厌~</div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <a href="images/chouxiang/3 (3).jpg" data-lightbox="gallery" data-title="表情包 14">
+                            <img src="images/chouxiang/3 (3).jpg" alt="表情包 14">
+                        </a>
+                        <div class="gallery-item-caption">毁灭吧</div>
+                    </div>
+                    <!-- Project images from huodong folder -->
+                    <div class="gallery-item" data-category="projects">
+                        <a href="images/huodong/2 (1).jpg" data-lightbox="gallery" data-title="我来搞定变色油墨">
+                            <img src="images/huodong/2 (1).jpg" alt="我来搞定变色油墨">
+                        </a>
+                        <div class="gallery-item-caption">我来搞定变色油墨</div>
+                    </div>
+                    <div class="gallery-item" data-category="projects">
+                        <a href="images/huodong/2 (2).jpg" data-lightbox="gallery" data-title="我来搞定无酸纸">
+                            <img src="images/huodong/2 (2).jpg" alt="我来搞定无酸纸">
+                        </a>
+                        <div class="gallery-item-caption">我来搞定无酸纸</div>
+                    </div>
+                    <div class="gallery-item" data-category="projects">
+                        <a href="images/huodong/2 (3).jpg" data-lightbox="gallery" data-title="蓝色是忧郁的颜色">
+                            <img src="images/huodong/2 (3).jpg" alt="蓝色是忧郁的颜色">
+                        </a>
+                        <div class="gallery-item-caption">蓝色是忧郁的颜色</div>
+                    </div>
+                    <div class="gallery-item" data-category="projects">
+                        <a href="images/huodong/2 (4).jpg" data-lightbox="gallery" data-title="pu签到">
+                            <img src="images/huodong/2 (4).jpg" alt="pu签到">
+                        </a>
+                        <div class="gallery-item-caption">学长，好巧啊</div>
+                    </div>
+                    <div class="gallery-item" data-category="projects">
+                        <a href="images/huodong/2 (5).jpg" data-lightbox="gallery" data-title="回头望月">
+                            <img src="images/huodong/2 (5).jpg" alt="回头望月">
+                        </a>
+                        <div class="gallery-item-caption">不巧，我在等你</div>
+                    </div>
+                    <div class="gallery-item" data-category="projects">
+                        <a href="images/huodong/2 (6).jpg" data-lightbox="gallery" data-title="知识竞答活动上唱“双簧”（主持）">
+                            <img src="images/huodong/2 (6).jpg" alt="知识竞答活动上唱“双簧”（主持）">
+                        </a>
+                        <div class="gallery-item-caption">知识竞答活动上唱“双簧”（主持）</div>
+                    </div>
+                    <div class="gallery-item" data-category="projects">
+                        <a href="images/huodong/2 (7).jpg" data-lightbox="gallery" data-title="某位不知名老登">
+                            <img src="images/huodong/2 (7).jpg" alt="某位不知名老登">
+                        </a>
+                        <div class="gallery-item-caption">老毕登</div>
+                    </div>
+                    <div class="gallery-item" data-category="projects">
+                        <a href="images/huodong/2 (8).jpg" data-lightbox="gallery" data-title="与民同乐">
+                            <img src="images/huodong/2 (8).jpg" alt="与民同乐">
+                        </a>
+                        <div class="gallery-item-caption">与民同乐</div>
+                    </div>
+                    <div class="gallery-item" data-category="projects">
+                        <a href="images/huodong/2 (9).jpg" data-lightbox="gallery" data-title="让我想起了化学实验课">
+                            <img src="images/huodong/2 (9).jpg" alt="让我想起了化学实验课">
+                        </a>
+                        <div class="gallery-item-caption">你们都逃不过的化学实验课😄</div>
+                    </div>
+                    <!-- Historical images from hezhao folder -->
+                    <div class="gallery-item" data-category="historical">
+                        <a href="images/hezhao/1 (1).jpg" data-lightbox="gallery" data-title="往昔回忆 1">
+                            <img src="images/hezhao/1 (1).jpg" alt="往昔回忆 1">
+                        </a>
+                        <div class="gallery-item-caption">合照</div>
+                    </div>
+                    
+                
+                    <div class="gallery-item" data-category="historical">
+                        <a href="images/hezhao/1 (5).jpg" data-lightbox="gallery" data-title="往昔回忆 5">
+                            <img src="images/hezhao/1 (5).jpg" alt="往昔回忆 5">
+                        </a>
+                        <div class="gallery-item-caption">合照</div>
+                    </div>
+                    <div class="gallery-item" data-category="historical">
+                        <a href="images/hezhao/1 (6).jpg" data-lightbox="gallery" data-title="往昔回忆 6">
+                            <img src="images/hezhao/1 (6).jpg" alt="往昔回忆 6">
+                        </a>
+                        <div class="gallery-item-caption">合照</div>
+                    </div>
+                </div>
+            </section>
+
+             <aside class="sidebar">
+                <section class="widget">
+                    <h4>分享活动瞬间</h4>
+                    <p>如果您有部门活动的珍贵照片或视频，欢迎联系我们补充，让回忆更完整！</p>
+                </section>
+                 <section class="widget">
+                    <h4>活动记录</h4>
+                    <ul>
+                        <li><a href="#">化学知识竞赛</a></li>
+                        <li><a href="#">荧光化学实验</a></li>
+                        <li><a href="#">……</a></li>
+                    </ul>
+                </section>
+            </aside>
+        </main>
+
+        <footer>
+            <p>© <span id="current-year"></span> 我们的部门. 共同记录，分享美好。</p>
+            <p>每一份回忆都由团队成员共同守护与珍藏。</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/snake-background.js"></script>
+    <!-- Consider adding a lightbox JS and gallery filtering JS -->
+    <!-- <script src="path/to/lightbox.js"></script> -->
+    <script>
+        // Basic gallery filter (extend as needed)
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.gallery-filters button');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    const filter = button.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // 内联视频播放逻辑
+            const videoContainer = document.getElementById('video-container-2024');
+            if (videoContainer) {
+                const thumbnailHTML = videoContainer.innerHTML;
+
+                const playVideoInline = () => {
+                    videoContainer.innerHTML = `
+                        <video controls autoplay style="width:100%;">
+                            <source src="images/video/2024.mp4" type="video/mp4">
+                            您的浏览器不支持视频标签。
+                        </video>
+                        <div class="gallery-item-caption">2024级纳新视频</div>
+                    `;
+                    const player = videoContainer.querySelector('video');
+                    player.addEventListener('ended', resetToThumbnail);
+                };
+
+                const resetToThumbnail = () => {
+                    videoContainer.innerHTML = thumbnailHTML;
+                    videoContainer.addEventListener('click', playVideoInline, { once: true });
+                };
+
+                videoContainer.addEventListener('click', playVideoInline, { once: true });
+                
+                // 当点击筛选按钮时，也恢复封面
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // 检查播放器是否存在
+                        if (videoContainer.querySelector('video[controls]')) {
+                            resetToThumbnail();
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
